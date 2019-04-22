@@ -12,3 +12,16 @@ define( 'DTL_THEME_DIR', trailingslashit( get_stylesheet_directory() ) );
 
 //custom image sizes
 require_once( DTL_THEME_DIR . 'includes/theme-options.php'); //custom image sizes
+
+
+function sidebar_widget_init() {
+    register_sidebar( array(
+        'name' => __( 'Main Sidebar'),
+        'id' => 'main_sidebar',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widgettitle">',
+        'after_title' => '</h3>'
+    ) );
+}
+add_action( 'widgets_init', 'sidebar_widget_init' );
