@@ -11,4 +11,4 @@ define( 'DTL_THEME_DIR', trailingslashit( get_stylesheet_directory() ) );
 
 
 //custom image sizes
-require_once( PROVOST_NEWS_THEME_DIR . 'includes/theme-options.php'); //custom image sizes
+require_once( DTL_THEME_DIR . 'includes/theme-options.php'); //custom image sizes
